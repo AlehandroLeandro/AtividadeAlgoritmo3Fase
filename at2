@@ -1,0 +1,22 @@
+package prova;
+
+import javax.swing.*;
+
+public class at2 {
+    public static void main(String[] args) {
+        JOptionPane.showMessageDialog(null, "Salário vendedor:");
+
+        double salFix = Double.parseDouble(JOptionPane.showInputDialog("Salário fixo: "));
+        double totVend = Double.parseDouble(JOptionPane.showInputDialog("Total de vendas do mês"));
+        double salFin = 0;
+
+        if(totVend >50000) {
+            salFin = salFix + totVend*0.03;
+        } else {
+            salFin = salFix + totVend*0.015;
+        }
+        JOptionPane.showMessageDialog(null, "Salpario Final: " +salFin);
+
+
+    }
+}
