@@ -1,0 +1,21 @@
+package prova;
+
+import javax.swing.*;
+
+public class at1 {
+    public static void main(String[] args) {
+        JOptionPane.showMessageDialog(null, "Juros e Conta!");
+
+        double depos = Double.parseDouble(JOptionPane.showInputDialog("Qual o valor do seu depósito:"));
+        double cont = Double.parseDouble(JOptionPane.showInputDialog("Quanto em contas você tem à pagara?"));
+        double valorFinal = depos + depos * 0.007;
+
+        JOptionPane.showMessageDialog(null, "Seu dinheiro inicial: " + depos + "\n Suas contas: " + cont);
+        if (valorFinal >= cont) {
+            JOptionPane.showMessageDialog(null,"Saldo Suficiente para as contas do mês.\nSaldo final: " + (valorFinal-cont));
+        } else {
+            JOptionPane.showMessageDialog(null, "Saldo insuficiente, por favor adquira um emprestimo.\nValor negativo: " + (valorFinal-cont));
+        }
+
+    }
+}
