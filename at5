@@ -1,0 +1,31 @@
+package prova;
+
+import javax.swing.*;
+
+public class at5 {
+    public static void main(String[] args) {
+        JOptionPane.showMessageDialog(null,"Carros: Anos e Cores");
+        int qnt = Integer.parseInt(JOptionPane.showInputDialog("Quantos carroes vai inserir: "));
+        int[] vect = new int[qnt];
+        int[] anoFab = new int[qnt];
+        String[] cor = new String[qnt];
+        int fab2122 = 0;
+        int azul =0;
+        int preto2021 =0;
+       
+
+
+        for(int i=0; i<qnt; i++) {
+            anoFab[i] = Integer.parseInt(JOptionPane.showInputDialog("Ano de fabricação: "));
+            cor[i] = JOptionPane.showInputDialog("Cor do carro: ");
+            if(anoFab[i]>=2010 && anoFab[i]<=2020) {
+                fab2122++;
+            } else if (cor[i].equals("azul")) {
+                azul++;
+            } else if (cor[i].equals("preto") && anoFab[i] ==2021) {
+                preto2021++;
+            }
+        }
+        JOptionPane.showMessageDialog(null,"Carros azuis: " + azul + "\nPreto 2021: " + preto2021 + "\nFavricados entre 20210 e 2020: " + fab2122);
+    }
+}
