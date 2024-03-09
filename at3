@@ -1,0 +1,43 @@
+package prova;
+
+import javax.swing.*;
+
+public class at3 {
+    public static void main(String[] args) {
+        JOptionPane.showMessageDialog(null,"Pares e Ímpares");
+        int qntInt = Integer.parseInt(JOptionPane.showInputDialog("Quandos números deseja inserir?:"));
+        int[] vet = new int[qntInt];
+        int[] imp = new int[qntInt];
+        int[] par = new int[qntInt];
+        int qntImp = 0;
+        int somPar = 0;
+        int somImp = 0;
+        int j=0;
+        int l=0;
+        int i;
+
+        for(i=0; i<vet.length; i++) {
+            vet[i] = Integer.parseInt(JOptionPane.showInputDialog("Insira um número: "));
+            if(vet[i] % 2 == 0) {
+                somPar+=vet[i];
+                par[j] = vet[i];
+                j++;
+            }
+            else {
+                qntImp++;
+                somImp+=vet[i];
+                imp[l] = vet[i];
+                l++;
+            }
+
+        }
+        for(i=0;i<j;i++) {
+            JOptionPane.showMessageDialog(null,"Pares: " + par[i]);
+        }
+        JOptionPane.showMessageDialog(null,"Soma: " + somPar);
+        for(i=0;i<j;i++) {
+            JOptionPane.showMessageDialog(null,"Ímpares: " + imp[i]);
+        }
+        JOptionPane.showMessageDialog(null,"Média: " + somImp/qntImp);
+    }
+}
