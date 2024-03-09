@@ -1,0 +1,21 @@
+package prova;
+
+import javax.swing.*;
+
+public class at4 {
+    public static void main(String[] args) {
+        JOptionPane.showMessageDialog(null, "Zé e Chico crescem juntos S2");
+        double altZe = 110;
+        double creZe = 3;
+        double altChico = 150;
+        double creChico = 02;
+        int anos = 0;
+
+        while(altZe<=altChico) {
+            altZe += creZe;
+            altChico += creChico;
+            anos++;
+        }
+        JOptionPane.showMessageDialog(null, "Anos passados: " + anos + "\nAltura Chico: " + altChico + "\nAltura Zé: " + altZe);
+    }
+}
